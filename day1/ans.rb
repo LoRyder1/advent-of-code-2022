@@ -25,7 +25,7 @@ end
 elf_total = []
 cal = []
 
-File.readlines('test.txt').each do |line|
+File.readlines('input.txt').each do |line|
   num = line.to_i
   if num != 0
     cal << num
@@ -37,12 +37,14 @@ File.readlines('test.txt').each do |line|
     elf_total << sum
     cal = []
   end
-  
+
 end
 
+x = elf_total.sort!.max
 
+p x
 # p cal
-p elf_total
+# p elf_total
 
 
 # p [1,2,3,4]
