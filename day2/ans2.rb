@@ -16,19 +16,36 @@ ans_B = {"X" => 0, "Y" => 3, "Z" => 6}
 
 ans_C = {"X" => 6, "Y" => 0, "Z" => 3}
 
-a = "AY"
+selection = {"X" => 1, "Y" => 2, "Z" => 3}
+
+# game = "AY"
+# game = "BX"
+game = "CZ"
 
 
 
-if a[0] == "A"
-  b = a[1]
-  c = ans_A[b]
-  puts 
-  puts c
-elsif a[0] == "B"
 
+if game[0] == "A"
+  player_2_play = game[1]
+  points = ans_A[player_2_play]
+  play2_sel = selection[player_2_play]
+  sum = 0
+  sum = points + play2_sel
+elsif game[0] == "B"
+  player_2_play = game[1]
+  points = ans_B[player_2_play]
+  play2_sel = selection[player_2_play]
+  sum = 0
+  sum = points + play2_sel
 else
+  player_2_play = game[1]
+  points = ans_C[player_2_play]
+  play2_sel = selection[player_2_play]
+  sum = 0
+  sum = points + play2_sel
 end
+
+puts sum
   # puts a[0] 
   # puts a[1]
 
