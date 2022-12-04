@@ -10,10 +10,27 @@
 
 # 15 (8 + 1 + 6)
 
-ans_A = {X: 3, Y: 6, Z: 0}
+ans_A = {"X" => 3, "Y" => 6, "Z" => 0}
 
-ans_B = {X: 0, Y: 3, Z: 6}
+ans_B = {"X" => 0, "Y" => 3, "Z" => 6}
 
-ans_C = {X: 6, Y: 0, Z: 3}
+ans_C = {"X" => 6, "Y" => 0, "Z" => 3}
+
+a = "AY"
 
 
+
+if a[0] == "A"
+  b = a[1]
+  c = ans_A[b]
+  puts 
+  puts c
+elsif a[0] == "B"
+
+else
+end
+  # puts a[0] 
+  # puts a[1]
+
+
+# run_game a
