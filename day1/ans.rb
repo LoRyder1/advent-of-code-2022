@@ -41,13 +41,9 @@ File.readlines('input.txt').each do |line|
 end
 
 x = elf_total.sort!.max
-
-p x
-# p cal
-# p elf_total
+# p x
 
 
-# p [1,2,3,4]
+top_three_elves = elf_total[-1] + elf_total[-2] + elf_total[-3]
 
-
-
+p top_three_elves

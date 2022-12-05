@@ -23,26 +23,34 @@ selection = {"X" => 1, "Y" => 2, "Z" => 3}
 # game = "CZ"
 
 # line = "A Y"
+
+# Round1 = A X
+# Round2 = B X
+# Round3 = C X
+
+# Count rounds - draw, lose, win
+
+
 total_points = 0
 
 File.readlines('input2.txt').each do |line|
 
   if line[0] == "A"
-    player_2_play = line[2]
+    player_2_play = "X"
     points = ans_A[player_2_play]
     play2_sel = selection[player_2_play]
 
     total_points += points + play2_sel
     # total_points += play2_sel
   elsif line[0] == "B"
-    player_2_play = line[2]
+    player_2_play = "X"
     points = ans_B[player_2_play]
     play2_sel = selection[player_2_play]
 
     total_points += points + play2_sel
     # total_points += play2_sel
   else
-    player_2_play = line[2]
+    player_2_play = "X"
     points = ans_C[player_2_play]
     play2_sel = selection[player_2_play]
 
@@ -53,7 +61,7 @@ end
 
 puts total_points
 
-
+#9007 wrong
 # 11666
   # puts a[0] 
   # puts a[1]
