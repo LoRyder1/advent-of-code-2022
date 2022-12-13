@@ -71,15 +71,20 @@ p3 = p1 + p2
 sum = 0
 ruck_items = []
 ruck_num = 0
-File.readlines('abc').each do |line|
+prior = []
+File.readlines('input.txt').each do |line|
   ruck_num +=1  
-  ruck_items << line
+  ruck_items << line.chop
 
   a = ""
   b = ""
   c = ""
+
+  common = ""
+
+  # p ruck_items
   if ruck_num %3 == 0
-    print ruck_items
+    # print ruck_items
     ruck_items.each_with_index do |x, i|
 
       if i == 0
@@ -90,21 +95,43 @@ File.readlines('abc').each do |line|
         c = x.chars
       end  
     end
+    
     a.each do |x|
       b.each do |y|
         c.each do |z|
           if x == y && y == z
-            p z
+            common = z
+            ruck_items = []
             break
           end
         end
       end
     end
-
-
+  end
+  if common != ""
+    # p common
+    prior << common
   end
 end
+# p prior
 
+# p p3.index('r')
+p1 = ('a'..'z').to_a
+p2 = ('A'..'Z').to_a
+
+p3 = p1 + p2
+
+sum = 0
+prior.each do |x|
+  a = p3.index x
+  a+=1
+  sum += a
+end
+
+# too low
+p sum
+
+p prior.count
 
 
 
